@@ -119,12 +119,12 @@ def outputMatB():
 def mBtomA():
 	for i in range(16):
 		mata[i] = matb[i]
-		mc.floatField("matb{}".format(i+1), e=True, value=mata[i])
+		mc.floatField("mata{}".format(i+1), e=True, value=mata[i])
 
 def clearMatB():
 	for i in range(16):
 		matb[i] = matVal[i]
-		mc.floatField("mata{}".format(i+1), e=True, value=matb[i])
+		mc.floatField("matb{}".format(i+1), e=True, value=matb[i])
 
 
 ### Matrix Calculation ###
@@ -147,7 +147,7 @@ def matrixPlsAB():
 
 	for i in range(16):
 		matCalc[i] = plusMat[i]
-		mc.floatField("ans{}".format(i+1), e=True, value=matCalc[i])	
+		mc.floatField("ans{}".format(i+1), e=True, value=matCalc[i])
 
 #======================
 #	Edit Calc
@@ -213,7 +213,7 @@ mc.menu( label='Output', to=False)
 mc.menuItem(label='.matrix',c="outputMatA()")
 mc.menu( label='Edit', to=False)
 mc.menuItem(label='Clear',c="clearMatA()")
-mc.menuItem(label='MatA → MatB',c='mAtomB()')
+mc.menuItem(label='MatA -> MatB',c='mAtomB()')
 
 
 mc.rowLayout(numberOfColumns=4)
@@ -258,7 +258,7 @@ mc.menu( label='Output', to=False)
 mc.menuItem(label='.matrix',c="outputMatB()")
 mc.menu( label='Edit', to=False)
 mc.menuItem(label='Clear',c="clearMatB()")
-mc.menuItem(label='MatA → MatB',c='mBtomA()')
+mc.menuItem(label='MatB -> MatA',c='mBtomA()')
 
 
 mc.rowLayout(numberOfColumns=4)
